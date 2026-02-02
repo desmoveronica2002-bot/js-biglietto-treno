@@ -1,4 +1,4 @@
-function mostraPrezzo() {
+// function mostraPrezzo() {
 
 const km = parseFloat(document.getElementById("km").value);
 const eta = parseInt(document.getElementById("eta").value);
@@ -22,6 +22,6 @@ else if ( eta > 65 ) {
 
  }
 
- document.getElementById("prezzo").innerText = "Prezzo: € " + prezzo.toFixed(2);
+ document.getElementById("prezzo").innerText = "Prezzo: € " + prezzo.toFixed(2); // toFixed limita il numero dei decimali
 
-}
+//}
