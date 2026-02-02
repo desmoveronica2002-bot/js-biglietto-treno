@@ -1,17 +1,27 @@
 function mostraPrezzo() {
 
-const km = document.getElementById("km");
-const eta = document.getElementById("eta");
+const km = parseFloat(document.getElementById("km").value);
+const eta = parseInt(document.getElementById("eta").value);
+
+let prezzo = km * 0.21;
 
 if ( eta < 18 ) {
 
+    prezzo = prezzo - ( prezzo * 0.20 );
+
 }
 
-else if ( eta >65 ) {
+else if ( eta > 65 ) {
+
+    prezzo = prezzo - (prezzo * 0.40 ); 
 
 }
  else {
-    
+
+    console.log("Prezzo finale:", prezzo, "€");
+
  }
+
+ document.getElementById("prezzo").innerText = "Prezzo: € " + prezzo.toFixed(2);
 
 }
